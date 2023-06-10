@@ -93,7 +93,7 @@ def create_search_index():
             name=args.index,
             fields=[
                 SimpleField(name="id", type="Edm.String", key=True),
-                SearchableField(name="content", type="Edm.String", analyzer_name="ja.microsoft"),
+                SearchableField(name="content", type="Edm.String", analyzer_name="ja.lucene"),
                 SimpleField(name="sourcepage", type="Edm.String", filterable=True, facetable=True)
             ],
             semantic_settings=SemanticSettings(
